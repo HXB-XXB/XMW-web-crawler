@@ -1,0 +1,259 @@
+body, .input, .textareaInput{
+    scrollbar-color: #888 #363636;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.loaded {
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;  /* 设置10px圆角 */
+    background-color: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7e7e7e;    /* 悬停时变为深灰色 */
+}
+::-webkit-scrollbar-track {
+    background-color: #363636;
+}
+::-webkit-scrollbar-button {
+    height: 16px;
+    border-radius: 4px;
+    background-color: #888;
+}
+::-webkit-scrollbar-button:hover {
+    background-color: #7e7e7e;    /* 悬停时变为深灰色 */
+}
+
+.txt, .lineTxt, .pawShow {
+    position: absolute;
+    font-weight: bold;
+    color: #cfcfcf; /* 白色填充 */
+    text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5), -1px -1px 0 rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.lineTxt {
+    left: 5px;
+    transition: all 50ms linear;
+    clip-path: inset(0 0 0 10px);
+    color: #ffffff;
+}
+
+.lineTxt:hover {
+    transform: translateX(10px);
+    clip-path: inset(0 0 0 0px);
+}
+
+.div {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+}
+
+.line{
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: #888;
+    border-color: rgb(27, 27, 27);
+    outline: none;
+    width: calc(100% - 21px);
+    height: 2px;
+    left: 9px;
+}
+
+.input, .pawShow {
+    font-family: monospace;
+}
+
+.pawShow {
+    top: 87.5px;
+    left: 130px;
+    text-shadow: 0 0 0 transparent;
+    font-size: 12.5px;
+    pointer-events: none
+}
+
+.textareaInput, .input {
+    position: absolute;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --fyzs-translate-theme-underline-borderColor: #72ece9;
+    --fyzs-translate-theme-nativeUnderline-borderColor: #72ece9;
+    --fyzs-translate-theme-nativeDashed-borderColor: #72ece9;
+    --fyzs-translate-theme-nativeDotted-borderColor: #72ece9;
+    --fyzs-translate-theme-highlight-backgroundColor: #ffff00;
+    --fyzs-translate-theme-dashed-borderColor: #59c1bd;
+    --fyzs-translate-theme-blockquote-borderColor: #cc3355;
+    --fyzs-translate-theme-thinDashed-borderColor: #ff374f;
+    --fyzs-translate-theme-dashedBorder-borderColor: #94a3b8;
+    --fyzs-translate-theme-dashedBorder-borderRadius: 0;
+    --fyzs-translate-theme-solidBorder-borderColor: #94a3b8;
+    --fyzs-translate-theme-solidBorder-borderRadius: 0;
+    --fyzs-translate-theme-dotted-borderColor: #94a3b8;
+    --fyzs-translate-theme-wavy-borderColor: #72ece9;
+    --fyzs-translate-theme-dividingLine-borderColor: #94a3b8;
+    --fyzs-translate-theme-grey-textColor: #2f4f4f;
+    --fyzs-translate-theme-marker-backgroundColor: #fbda41;
+    --fyzs-translate-theme-marker-backgroundColor-rgb: 251, 218, 65;
+    --fyzs-translate-theme-marker2-backgroundColor: #ffff00;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    margin: 0;
+    line-height: inherit;
+    display: block;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+    outline: none;
+}
+
+.input:focus, .textareaInput:focus {
+    border-color: #72ece9;
+    background-color: #333;
+}
+
+.textareaInput {/* 抄小木屋的（（（ */
+    font-size: 15px;
+    resize: none;
+    width: calc(100% - 17.5px);
+    height: 100px;
+    top: 55px;
+    left: 7.5px;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.input {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 12.5px;
+    border-radius: 3px;
+    left: 125px;
+    height: 20px;
+    width: 225px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    border-color: #888;
+}
+
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.but {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    outline: none;
+    top: 60px;
+    left: calc(50% - 50px);
+    overflow: auto;
+    text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5), -1px -1px 0 rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.but:hover {
+    background-color: #555;
+    border-color: #72ece9;
+}
+
+.checkBox {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17.5px;
+    height: 17.5px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.checkBox::before {
+    transition: opacity 150ms ease-in-out;
+    opacity: 0;
+}
+.checkBox:checked {
+    background-color: #94a3b8;
+    border-color: #72ece9;
+}
+.checkBox:checked::before {
+    content: "✔";
+    color: white;
+    position: absolute;
+    left: 2.5px;
+    top: -1.5px;
+    opacity: 1;
+}
+
+.list {
+    position: absolute;
+    font-weight: 10px;
+    font-size: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    outline: none;
+    top: 55px;
+    left: 10px;
+    text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5), 1px 1px 0 rgba(0, 0, 0, 0.5), -1px -1px 0 rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+
+.list:hover {
+    border-color: #72ece9;
+}
